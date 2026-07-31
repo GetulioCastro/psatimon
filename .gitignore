@@ -1,0 +1,20 @@
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Pastas de compilação do .NET (C#)
+bin/
+obj/
+
+# Arquivos de log e cache do sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# Ferramentas e dependências locais
+.paket/
+.fake/
