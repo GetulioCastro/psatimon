@@ -346,6 +346,218 @@
     .bg-soft-mint { background: #d4f0e8; }
     .bg-soft-yellow { background: #fcf0d4; }
 
+    section[id] {
+      scroll-margin-top: 95px;
+    }
+
+    #missas {
+      background: linear-gradient(135deg, #eef1ff, #f3f1ff);
+      border-radius: 40px 40px 0 0;
+    }
+
+    .missas-notice {
+      max-width: 760px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border: 1px solid rgba(106, 123, 212, 0.25);
+      border-radius: 16px;
+      padding: 16px 24px;
+      text-align: center;
+      color: #7a7a7a;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .missas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+    }
+
+    .missa-card {
+      background: #fff;
+      border: 1px solid rgba(106, 123, 212, 0.25);
+      border-radius: 16px;
+      padding: 24px 8px;
+      text-align: center;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .missa-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(106, 123, 212, 0.18);
+    }
+
+    .missa-card h3 {
+      color: #3a4a9e;
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+    }
+
+    .missa-status {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #eef1ff;
+      border-radius: 20px;
+      color: #7a83c9;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .comunidades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .comunidade-card {
+      background: #fff;
+      border: 1px solid rgba(106, 123, 212, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comunidade-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 35px rgba(106, 123, 212, 0.2);
+    }
+
+    .comunidade-photo {
+      height: 150px;
+      background: linear-gradient(135deg, #e8ecff, #dfe4ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #6a7bd4;
+      font-size: 2.2rem;
+    }
+
+    .comunidade-photo small {
+      font-size: 0.72rem;
+      color: #7c86c9;
+      letter-spacing: 0.4px;
+    }
+
+    .comunidade-body {
+      padding: 22px 22px 26px;
+      flex: 1;
+    }
+
+    .comunidade-body h3 {
+      color: #3a4a9e;
+      font-size: 1.15rem;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .comunidade-info {
+      list-style: none;
+    }
+
+    .comunidade-info li {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.82rem;
+      color: #999;
+      padding: 7px 0;
+      border-bottom: 1px dashed rgba(106, 123, 212, 0.2);
+    }
+
+    .comunidade-info li:last-child {
+      border-bottom: none;
+    }
+
+    .comunidade-info li span {
+      color: #4a5ab8;
+      font-weight: 600;
+    }
+
+    .palavra-card {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 40px;
+      align-items: center;
+      background: #fff;
+      border: 1px solid rgba(106, 123, 212, 0.25);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .palavra-photo {
+      height: 280px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #e8ecff, #dfe4ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #6a7bd4;
+    }
+
+    .palavra-photo-glyph {
+      font-size: 3.5rem;
+    }
+
+    .palavra-photo small {
+      font-size: 0.72rem;
+      color: #7c86c9;
+      letter-spacing: 0.4px;
+    }
+
+    .palavra-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #eef1ff;
+      border-radius: 20px;
+      color: #4a5ab8;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .palavra-text {
+      color: #888;
+      line-height: 1.8;
+      margin: 18px 0 22px;
+      font-style: italic;
+    }
+
+    .palavra-meta {
+      display: grid;
+      gap: 10px;
+    }
+
+    .palavra-meta div {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+
+    .palavra-meta dt {
+      color: #3a4a9e;
+      font-weight: 600;
+      min-width: 160px;
+    }
+
+    .palavra-meta dd {
+      color: #999;
+    }
+
     .recados {
       background: linear-gradient(135deg, #eef1ff, #e8ecff);
       border-radius: 40px 40px 0 0;
@@ -524,7 +736,7 @@
       }
 
       nav.open {
-        max-height: 400px;
+        max-height: 900px;
       }
 
       nav a {
@@ -559,6 +771,53 @@
 
       .section-title h2 {
         font-size: 1.8rem;
+      }
+
+      .missas-notice {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+      }
+
+      .missas-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 14px;
+      }
+
+      .missa-card {
+        padding: 20px 8px;
+      }
+
+      .comunidades-grid {
+        gap: 20px;
+      }
+
+      .palavra-card {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px;
+      }
+
+      .palavra-photo {
+        height: 220px;
+      }
+
+      .palavra-meta dt {
+        min-width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+      .logo {
+        font-size: 1.15rem;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 0.82rem;
       }
     }
 
