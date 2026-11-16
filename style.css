@@ -658,19 +658,33 @@
       transform: scale(0.98);
     }
 
-    .success-msg {
-      display: none;
-      text-align: center;
-      padding: 15px;
-      background: #d4f0e8;
-      color: #4a7c6e;
-      border-radius: 12px;
-      margin-top: 15px;
-      font-weight: 500;
+    .form-group input:disabled,
+    .form-group textarea:disabled,
+    .form-group select:disabled {
+      background: #fff;
+      color: #555;
+      opacity: 1;
+      cursor: not-allowed;
     }
 
-    .success-msg.show {
-      display: block;
+    .btn-submit:disabled,
+    .btn-submit:disabled:hover,
+    .btn-submit:disabled:active {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-unavailable {
+      margin-top: 15px;
+      padding: 13px 15px;
+      background: #f4f5ff;
+      border: 1px dashed rgba(106, 123, 212, 0.45);
+      border-radius: 12px;
+      text-align: center;
+      color: #6b74b8;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     footer {

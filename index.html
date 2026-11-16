@@ -303,20 +303,20 @@
   <div class="container">
     <div class="section-title">
       <h2>Recados para a Secretária</h2>
-      <p>Envie sua mensagem, intenções ou pedido de oração</p>
+      <p>Informações de contato da nossa secretaria</p>
       <div class="title-underline"></div>
     </div>
     <div class="recados-wrapper">
       <div class="recados-info">
         <h3>Estamos aqui por você</h3>
         <p>
-          Sua mensagem será recebida pela nossa secretaria e respondida
-          o mais breve possível. Você pode pedir orações, agendar
-          batizados, casamentos, ou simplesmente deixar um recado.
+          Informações de atendimento da nossa secretaria paroquial.
+          Os canais de contato estão em atualização e o envio de
+          recados pela página está temporariamente indisponível.
         </p>
-        <div class="contact-item">&#128222; (11) 99999-8888</div>
-        <div class="contact-item">&#9993; secretaria@paroquiasantoantonio.com.br</div>
-        <div class="contact-item">&#128205; Rua da Igreja, 123 — Santo Antônio</div>
+        <div class="contact-item">&#128222; Telefone: em atualização</div>
+        <div class="contact-item">&#9993; E-mail: em atualização</div>
+        <div class="contact-item">&#128205; Endereço: em atualização</div>
         <div style="margin-top:25px;padding:20px;background:#fff;border-radius:16px;border:1px solid rgba(106,123,212,0.25);">
           <p style="font-style:italic;color:#4a5ab8;font-size:0.95rem;">
             &#10077; Deus ouve a oração de todos os corações sinceros. &#10078;
@@ -324,18 +324,18 @@
         </div>
       </div>
       <div class="recados-form">
-        <form id="recadoForm">
+        <form id="recadoForm" aria-describedby="formUnavailable">
           <div class="form-group">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required disabled>
           </div>
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required disabled>
           </div>
           <div class="form-group">
             <label for="assunto">Assunto</label>
-            <select id="assunto" name="assunto" required>
+            <select id="assunto" name="assunto" required disabled>
               <option value="">Selecione</option>
               <option>Pedido de Oração</option>
               <option>Agendamento (Batizado/Casamento)</option>
@@ -346,12 +346,12 @@
           </div>
           <div class="form-group">
             <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required disabled></textarea>
           </div>
-          <button type="submit" class="btn-submit">Enviar Recado</button>
-          <div class="success-msg" id="successMsg">
-            &#10004; Recado enviado com sucesso! Em breve entraremos em contato.
-          </div>
+          <button type="submit" class="btn-submit" disabled>Enviar Recado</button>
+          <p class="form-unavailable" id="formUnavailable" role="status">
+            Envio de recados temporariamente indisponível.
+          </p>
         </form>
       </div>
     </div>
@@ -430,10 +430,6 @@
 
   document.getElementById('recadoForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const msg = document.getElementById('successMsg');
-    msg.classList.add('show');
-    this.reset();
-    setTimeout(() => msg.classList.remove('show'), 5000);
   });
 </script>
 
