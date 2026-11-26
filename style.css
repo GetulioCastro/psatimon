@@ -1,3 +1,18 @@
+  :root {
+      /* Identidade visual institucional — marfim, marrom e dourado */
+      --marfim: #F7F1E4;
+      --pergaminho: #FBF7EE;
+      --bege: #EFE2CC;
+      --bege-escuro: #E2D0B2;
+      --marrom-escuro: #3E2A1E;
+      --marrom-medio: #7A5B41;
+      --dourado: #C29A45;
+      --dourado-claro: #E8D6A8;
+      --dourado-suave: #F0E4C6;
+      --borda: rgba(122, 91, 65, .25);
+      --sombra: rgba(62, 42, 30, .10);
+    }
+
   * {
       margin: 0;
       padding: 0;
@@ -6,8 +21,16 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #faf5f0;
-      color: #4a4a4a;
+      background-color: var(--marfim);
+      color: var(--marrom-medio);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    button {
+      font-family: inherit;
     }
 
     .container {
@@ -17,7 +40,7 @@
     }
 
     header {
-      background: linear-gradient(135deg, #7b8ce8, #6a7bd4);
+      background: linear-gradient(135deg, var(--marrom-escuro), var(--marrom-medio));
       box-shadow: 0 2px 15px rgba(0,0,0,0.12);
       position: fixed;
       width: 100%;
@@ -27,7 +50,7 @@
     }
 
     header.scrolled {
-      background: rgba(106, 123, 212, 0.95);
+      background: rgba(62, 42, 30, 0.95);
       backdrop-filter: blur(10px);
     }
 
@@ -39,6 +62,7 @@
     }
 
     .logo {
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.5rem;
       font-weight: 700;
       color: #fff;
@@ -46,7 +70,7 @@
     }
 
     .logo span {
-      color: #e8eaff;
+      color: var(--dourado-claro);
     }
 
     nav {
@@ -91,7 +115,7 @@
       position: absolute;
       top: 100%;
       left: 0;
-      background: #fff;
+      background: var(--pergaminho);
       min-width: 320px;
       max-height: 400px;
       overflow-y: auto;
@@ -100,7 +124,7 @@
       list-style: none;
       padding: 10px 0;
       z-index: 1001;
-      border: 1px solid rgba(106, 123, 212, 0.3);
+      border: 1px solid var(--borda);
     }
 
     .nav-dropdown:hover .dropdown-menu {
@@ -110,11 +134,11 @@
     .dropdown-menu li a {
       display: block;
       padding: 12px 20px;
-      color: #333;
+      color: var(--marrom-medio);
       text-decoration: none;
       font-size: 0.9rem;
       transition: background 0.2s, color 0.2s;
-      border-bottom: 1px solid rgba(106, 123, 212, 0.15);
+      border-bottom: 1px solid var(--borda);
     }
 
     .dropdown-menu li a::after {
@@ -122,7 +146,7 @@
     }
 
     .dropdown-menu li a:hover {
-      background: #6a7bd4;
+      background: var(--marrom-medio);
       color: #fff;
     }
 
@@ -184,7 +208,7 @@
     .carousel-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(90, 107, 196, 0.7), rgba(106, 123, 212, 0.7));
+      background: linear-gradient(135deg, rgba(62, 42, 30, 0.72), rgba(122, 91, 65, 0.62));
     }
 
     .slide-content {
@@ -199,7 +223,7 @@
     .slide-content h1 {
       font-size: 3rem;
       margin-bottom: 15px;
-      text-shadow: 0 2px 10px rgba(255,255,255,0.5);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
     }
 
     .slide-content p {
@@ -212,7 +236,7 @@
       top: 50%;
       transform: translateY(-50%);
       background: rgba(255,255,255,0.85);
-      color: #4a5ab8;
+      color: var(--marrom-escuro);
       border: none;
       width: 50px;
       height: 50px;
@@ -267,19 +291,19 @@
 
     .section-title h2 {
       font-size: 2.2rem;
-      color: #4a5ab8;
+      color: var(--marrom-escuro);
       margin-bottom: 10px;
     }
 
     .section-title p {
-      color: #999;
+      color: var(--marrom-medio);
       font-size: 1.1rem;
     }
 
     .title-underline {
       width: 60px;
       height: 3px;
-      background: linear-gradient(90deg, #6a7bd4, #5a6bc4);
+      background: linear-gradient(90deg, var(--dourado), var(--dourado-claro));
       margin: 15px auto 0;
       border-radius: 3px;
     }
@@ -291,18 +315,18 @@
     }
 
     .pastoral-card {
-      background: #fff;
+      background: var(--pergaminho);
       border-radius: 20px;
       padding: 35px 30px;
       text-align: center;
       box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       transition: transform 0.3s, box-shadow 0.3s;
-      border: 1px solid rgba(106, 123, 212, 0.25);
+      border: 1px solid var(--borda);
     }
 
     .pastoral-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 35px rgba(106, 123, 212, 0.2);
+      box-shadow: 0 12px 35px var(--sombra);
     }
 
     .pastoral-icon {
@@ -317,13 +341,13 @@
     }
 
     .pastoral-card h3 {
-      color: #3a4a9e;
+      color: var(--marrom-escuro);
       margin-bottom: 10px;
       font-size: 1.3rem;
     }
 
     .pastoral-card p {
-      color: #888;
+      color: var(--marrom-medio);
       font-size: 0.95rem;
       line-height: 1.6;
     }
@@ -332,41 +356,42 @@
       display: inline-block;
       margin-top: 15px;
       padding: 6px 18px;
-      background: linear-gradient(135deg, #6a7bd4, #5a6bc4);
+      background: var(--dourado-suave);
+      border: 1px solid var(--dourado);
       border-radius: 20px;
       font-size: 0.85rem;
-      color: #fff;
+      color: var(--marrom-escuro);
       font-weight: 600;
     }
 
-    .bg-soft-pink { background: #fce4ec; }
-    .bg-soft-blue { background: #d4e4f7; }
-    .bg-soft-lavender { background: #e8d5f5; }
-    .bg-soft-peach { background: #fde8d0; }
-    .bg-soft-mint { background: #d4f0e8; }
-    .bg-soft-yellow { background: #fcf0d4; }
+    .bg-soft-pink { background: var(--dourado-suave); }
+    .bg-soft-blue { background: var(--bege); }
+    .bg-soft-lavender { background: var(--dourado-claro); }
+    .bg-soft-peach { background: var(--bege-escuro); }
+    .bg-soft-mint { background: var(--dourado-suave); }
+    .bg-soft-yellow { background: var(--dourado-claro); }
 
     section[id] {
       scroll-margin-top: 95px;
     }
 
     #missas {
-      background: linear-gradient(135deg, #eef1ff, #f3f1ff);
+      background: linear-gradient(135deg, var(--pergaminho), var(--bege));
       border-radius: 40px 40px 0 0;
     }
 
     .missas-notice {
       max-width: 760px;
       margin: 0 auto 40px;
-      background: #fff;
-      border: 1px solid rgba(106, 123, 212, 0.25);
+      background: var(--pergaminho);
+      border: 1px solid var(--borda);
       border-radius: 16px;
       padding: 16px 24px;
       text-align: center;
-      color: #7a7a7a;
+      color: var(--marrom-medio);
       font-size: 0.95rem;
       line-height: 1.7;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 14px var(--sombra);
     }
 
     .missas-grid {
@@ -376,8 +401,8 @@
     }
 
     .missa-card {
-      background: #fff;
-      border: 1px solid rgba(106, 123, 212, 0.25);
+      background: var(--pergaminho);
+      border: 1px solid var(--borda);
       border-radius: 16px;
       padding: 24px 8px;
       text-align: center;
@@ -387,11 +412,11 @@
 
     .missa-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(106, 123, 212, 0.18);
+      box-shadow: 0 12px 30px var(--sombra);
     }
 
     .missa-card h3 {
-      color: #3a4a9e;
+      color: var(--marrom-escuro);
       font-size: 1.05rem;
       margin-bottom: 12px;
     }
@@ -399,9 +424,9 @@
     .missa-status {
       display: inline-block;
       padding: 5px 10px;
-      background: #eef1ff;
+      background: var(--dourado-suave);
       border-radius: 20px;
-      color: #7a83c9;
+      color: var(--marrom-escuro);
       font-size: 0.75rem;
       font-weight: 600;
     }
@@ -413,8 +438,8 @@
     }
 
     .comunidade-card {
-      background: #fff;
-      border: 1px solid rgba(106, 123, 212, 0.25);
+      background: var(--pergaminho);
+      border: 1px solid var(--borda);
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -425,24 +450,24 @@
 
     .comunidade-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 35px rgba(106, 123, 212, 0.2);
+      box-shadow: 0 12px 35px var(--sombra);
     }
 
     .comunidade-photo {
       height: 150px;
-      background: linear-gradient(135deg, #e8ecff, #dfe4ff);
+      background: linear-gradient(135deg, var(--bege), var(--dourado-suave));
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      color: #6a7bd4;
+      color: var(--marrom-medio);
       font-size: 2.2rem;
     }
 
     .comunidade-photo small {
       font-size: 0.72rem;
-      color: #7c86c9;
+      color: var(--marrom-medio);
       letter-spacing: 0.4px;
     }
 
@@ -452,7 +477,7 @@
     }
 
     .comunidade-body h3 {
-      color: #3a4a9e;
+      color: var(--marrom-escuro);
       font-size: 1.15rem;
       line-height: 1.4;
       margin-bottom: 14px;
@@ -469,9 +494,9 @@
       gap: 10px;
       flex-wrap: wrap;
       font-size: 0.82rem;
-      color: #999;
+      color: var(--marrom-medio);
       padding: 7px 0;
-      border-bottom: 1px dashed rgba(106, 123, 212, 0.2);
+      border-bottom: 1px dashed var(--borda);
     }
 
     .comunidade-info li:last-child {
@@ -479,7 +504,7 @@
     }
 
     .comunidade-info li span {
-      color: #4a5ab8;
+      color: var(--marrom-escuro);
       font-weight: 600;
     }
 
@@ -488,8 +513,8 @@
       grid-template-columns: 260px 1fr;
       gap: 40px;
       align-items: center;
-      background: #fff;
-      border: 1px solid rgba(106, 123, 212, 0.25);
+      background: var(--pergaminho);
+      border: 1px solid var(--borda);
       border-radius: 24px;
       padding: 40px;
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
@@ -498,13 +523,13 @@
     .palavra-photo {
       height: 280px;
       border-radius: 16px;
-      background: linear-gradient(135deg, #e8ecff, #dfe4ff);
+      background: linear-gradient(135deg, var(--bege), var(--dourado-suave));
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      color: #6a7bd4;
+      color: var(--marrom-medio);
     }
 
     .palavra-photo-glyph {
@@ -513,16 +538,16 @@
 
     .palavra-photo small {
       font-size: 0.72rem;
-      color: #7c86c9;
+      color: var(--marrom-medio);
       letter-spacing: 0.4px;
     }
 
     .palavra-badge {
       display: inline-block;
       padding: 6px 16px;
-      background: #eef1ff;
+      background: var(--dourado-suave);
       border-radius: 20px;
-      color: #4a5ab8;
+      color: var(--marrom-escuro);
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.6px;
@@ -530,7 +555,7 @@
     }
 
     .palavra-text {
-      color: #888;
+      color: var(--marrom-medio);
       line-height: 1.8;
       margin: 18px 0 22px;
       font-style: italic;
@@ -549,17 +574,17 @@
     }
 
     .palavra-meta dt {
-      color: #3a4a9e;
+      color: var(--marrom-escuro);
       font-weight: 600;
       min-width: 160px;
     }
 
     .palavra-meta dd {
-      color: #999;
+      color: var(--marrom-medio);
     }
 
     .recados {
-      background: linear-gradient(135deg, #eef1ff, #e8ecff);
+      background: linear-gradient(135deg, var(--pergaminho), var(--bege));
       border-radius: 40px 40px 0 0;
     }
 
@@ -572,12 +597,12 @@
 
     .recados-info h3 {
       font-size: 1.5rem;
-      color: #3a4a9e;
+      color: var(--marrom-escuro);
       margin-bottom: 15px;
     }
 
     .recados-info p {
-      color: #888;
+      color: var(--marrom-medio);
       line-height: 1.8;
       margin-bottom: 10px;
     }
@@ -587,15 +612,15 @@
       align-items: center;
       gap: 10px;
       margin-bottom: 8px;
-      color: #4a5ab8;
+      color: var(--marrom-escuro);
     }
 
     .recados-form {
-      background: #fff;
+      background: var(--pergaminho);
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-      border: 1px solid rgba(106, 123, 212, 0.25);
+      border: 1px solid var(--borda);
     }
 
     .form-group {
@@ -605,7 +630,7 @@
     .form-group label {
       display: block;
       margin-bottom: 6px;
-      color: #3a4a9e;
+      color: var(--marrom-escuro);
       font-weight: 500;
       font-size: 0.9rem;
     }
@@ -615,19 +640,19 @@
     .form-group select {
       width: 100%;
       padding: 12px 15px;
-      border: 2px solid #eee;
+      border: 2px solid var(--bege-escuro);
       border-radius: 12px;
       font-size: 0.95rem;
       font-family: inherit;
       transition: border-color 0.3s;
-      background: #fafafa;
+      background: var(--pergaminho);
       outline: none;
     }
 
     .form-group input:focus,
     .form-group textarea:focus,
     .form-group select:focus {
-      border-color: #6a7bd4;
+      border-color: var(--dourado);
       background: #fff;
     }
 
@@ -639,7 +664,7 @@
     .btn-submit {
       width: 100%;
       padding: 14px;
-      background: linear-gradient(135deg, #6a7bd4, #5a6bc4);
+      background: linear-gradient(135deg, var(--marrom-medio), var(--marrom-escuro));
       border: none;
       border-radius: 12px;
       color: #fff;
@@ -661,8 +686,8 @@
     .form-group input:disabled,
     .form-group textarea:disabled,
     .form-group select:disabled {
-      background: #fff;
-      color: #555;
+      background: var(--bege);
+      color: var(--marrom-medio);
       opacity: 1;
       cursor: not-allowed;
     }
@@ -678,17 +703,17 @@
     .form-unavailable {
       margin-top: 15px;
       padding: 13px 15px;
-      background: #f4f5ff;
-      border: 1px dashed rgba(106, 123, 212, 0.45);
+      background: var(--dourado-suave);
+      border: 1px dashed var(--dourado);
       border-radius: 12px;
       text-align: center;
-      color: #6b74b8;
+      color: var(--marrom-escuro);
       font-size: 0.9rem;
       font-weight: 500;
     }
 
     footer {
-      background: linear-gradient(135deg, #6a7bd4, #5a6bc4);
+      background: linear-gradient(135deg, var(--marrom-medio), var(--marrom-escuro));
       padding: 30px 0;
       text-align: center;
       color: #fff;
@@ -739,7 +764,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(106, 123, 212, 0.98);
+        background: rgba(62, 42, 30, 0.98);
         flex-direction: column;
         gap: 0;
         padding: 0;
